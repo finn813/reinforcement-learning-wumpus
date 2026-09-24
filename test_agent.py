@@ -31,6 +31,8 @@ def test_training_learns_the_fixed_map():
     train(env, agent, 8_000, seed=7)
     metrics = evaluate(env, agent, 100, seed=8)
     assert metrics["goal_rate"] >= 0.95
+    assert 1 <= metrics["average_steps"] <= env.max_steps
+    assert 1 <= metrics["average_goal_steps"] <= env.max_steps
 
 
 def test_save_and_load_round_trip(tmp_path):

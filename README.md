@@ -29,8 +29,14 @@ environment. By default it trains against the single fixed map, evaluates a
 greedy policy, and saves the learned Q-table:
 
 ```bash
-python agent.py --episodes 50000 --evaluation-episodes 1000
+python agent.py --episodes 1000 --evaluation-episodes 1000
 ```
+
+Evaluation reports both the average number of steps across all episodes and the
+average for successful episodes. Compare those together with goal, hazard, and
+truncation rates: average steps alone can misleadingly reward an agent that
+fails quickly. Use the same maps, seeds, step limit, and evaluation episode
+count when comparing tabular Q-learning with DQN or recurrent DQN agents.
 
 Useful options include `--seed`, `--maps`, and `--output`. A saved policy can be
 loaded with `QLearningAgent.load("wumpus_q_table.pkl")`.

@@ -149,8 +149,15 @@ def evaluate(
     *,
     seed: int | None = None,
 ) -> dict[str, float]:
-    """Evaluate greedily without exploration or learning."""
+    """Evaluate greedily without exploration or learning.
+
+    Step counts are reported both across all episodes and across successful
+    episodes only.  Keeping both avoids making an agent that fails quickly look
+    more efficient than an agent that reliably reaches the goal.
+    """
     returns: list[float] = []
+    episode_steps: list[int] = []
+    goal_steps: list[int] = []
     goals = hazards = truncations = 0
     for episode in range(episodes):
         observation, _ = env.reset(seed=seed if episode == 0 else None)
@@ -158,7 +165,7 @@ def evaluate(
         episode_return = 0.0
         while True:
             action = agent.get_action(state, explore=False)
-            observation, reward, terminated, truncated, _ = env.step(action)
+            observation, reward, terminated, truncated, info = env.step(action)
             state = observation_to_state(observation)
             episode_return += reward
             if terminated or truncated:
@@ -166,13 +173,19 @@ def evaluate(
                     truncations += 1
                 elif reward == env.goal_reward:
                     goals += 1
+                    goal_steps.append(int(info["steps"]))
                 else:
                     hazards += 1
+                episode_steps.append(int(info["steps"]))
                 break
         returns.append(episode_return)
 
     return {
         "average_return": float(np.mean(returns)),
+        "average_steps": float(np.mean(episode_steps)),
+        "average_goal_steps": (
+            float(np.mean(goal_steps)) if goal_steps else float("nan")
+        ),
         "goal_rate": goals / episodes,
         "hazard_rate": hazards / episodes,
         "truncation_rate": truncations / episodes,
@@ -186,7 +199,7 @@ def _tail_mean(values: Iterable[float], count: int = 1_000) -> float:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--episodes", type=int, default=50_000)
+    parser.add_argument("--episodes", type=int, default=1_000)
     parser.add_argument("--evaluation-episodes", type=int, default=1_000)
     parser.add_argument("--maps", type=int, default=1)
     parser.add_argument("--seed", type=int, default=0)
@@ -212,6 +225,8 @@ def main() -> None:
 
     print(f"Training return (last 1000): {_tail_mean(returns):.2f}")
     print(f"Evaluation average return:    {metrics['average_return']:.2f}")
+    print(f"Evaluation average steps:     {metrics['average_steps']:.2f}")
+    print(f"Average successful steps:     {metrics['average_goal_steps']:.2f}")
     print(f"Goal rate:                    {metrics['goal_rate']:.1%}")
     print(f"Hazard rate:                  {metrics['hazard_rate']:.1%}")
     print(f"Truncation rate:              {metrics['truncation_rate']:.1%}")
