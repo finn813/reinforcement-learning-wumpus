@@ -22,6 +22,27 @@ for _ in range(100):
 
 For tabular methods, make the observation hashable with `tuple(obs)`.
 
+## Train a Q-learning agent
+
+`agent.py` adapts Gymnasium's introductory tabular Q-learning agent to this
+environment. By default it trains against the single fixed map, evaluates a
+greedy policy, and saves the learned Q-table:
+
+```bash
+python agent.py --episodes 50000 --evaluation-episodes 1000
+```
+
+Useful options include `--seed`, `--maps`, and `--output`. A saved policy can be
+loaded with `QLearningAgent.load("wumpus_q_table.pkl")`.
+
+The fixed-map default is intentional. The observation contains position and
+local percepts, but not the map identity or observation history. With multiple
+maps, the same observation may require different actions, so ordinary tabular
+Q-learning learns a compromise rather than a policy that remembers or infers a
+map. Generalisation across changing maps needs a richer observation/state (for
+example map identity during training or a history/belief state) and commonly a
+function approximator or recurrent agent.
+
 ## Specification
 
 **Observation** — `float32` vector `[x, y, breeze, stench]`. `x, y` are raw
