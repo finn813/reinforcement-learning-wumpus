@@ -41,6 +41,36 @@ count when comparing tabular Q-learning with DQN or recurrent DQN agents.
 Useful options include `--seed`, `--maps`, and `--output`. A saved policy can be
 loaded with `QLearningAgent.load("wumpus_q_table.pkl")`.
 
+## Train a Deep Q-Network
+
+`dqn_agent.py` implements experience replay and a separate target network. It
+evaluates the model at multiple training checkpoints, making its learning curve
+visible rather than reporting only the final result:
+
+```bash
+python dqn_agent.py --maps 1 --episodes 5000
+```
+
+Use a finite pool to compare learning on several recurring maps:
+
+```bash
+python dqn_agent.py --maps 10 --eval-maps training --episodes 10000 \
+  --checkpoints 100,500,1000,2000,5000,10000
+```
+
+Or evaluate the same trained model on a newly generated map in every evaluation
+episode:
+
+```bash
+python dqn_agent.py --maps 10 --eval-maps new --episodes 10000 \
+  --checkpoints 100,500,1000,2000,5000,10000
+```
+
+For fair comparisons with future agents, keep the training-map count, seed,
+checkpoint list, evaluation mode, evaluation episode count, rewards, and maximum
+episode length identical. Goal rate must be considered alongside step count: an
+agent that immediately enters a hazard uses few steps but is not a good agent.
+
 The fixed-map default is intentional. The observation contains position and
 local percepts, but not the map identity or observation history. With multiple
 maps, the same observation may require different actions, so ordinary tabular
