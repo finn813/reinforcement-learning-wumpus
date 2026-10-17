@@ -50,8 +50,9 @@ class WumpusAgent:
             return self.env.action_space.sample()
 
         # With probability (1-epsilon): exploit (best known action)
-        else:
-            return int(np.argmax(self.q_values[state]))
+        q_values = self.q_values[state]
+        best_actions = np.where(q_values == np.max(q_values))[0]
+        return int(np.random.choice(best_actions))
         
     def update(
         self,
