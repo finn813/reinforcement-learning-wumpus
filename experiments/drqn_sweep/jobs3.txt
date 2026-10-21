@@ -1,0 +1,12 @@
+--episodes 10000 --period 100 --seed 0 --maps inf
+--episodes 10000 --period 100 --seed 0 --maps 1000
+--episodes 10000 --period 100 --seed 0 --maps 500
+--episodes 10000 --period 100 --seed 0 --maps 10
+--episodes 10000 --period 100 --seed 1 --maps inf
+--episodes 10000 --period 100 --seed 1 --maps 1000
+--episodes 10000 --period 100 --seed 1 --maps 500
+--episodes 10000 --period 100 --seed 1 --maps 10
+--episodes 10000 --period 100 --seed 2 --maps inf
+--episodes 10000 --period 100 --seed 2 --maps 1000
+--episodes 10000 --period 100 --seed 2 --maps 500
+--episodes 10000 --period 100 --seed 2 --maps 10
