@@ -1,0 +1,45 @@
+{
+ "agent": "random",
+ "note": "untrained; seeds are policy seeds",
+ "runs": [
+  {
+   "agent": "random",
+   "seed": 0,
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.253,
+    "death_rate": 0.683,
+    "timeout_rate": 0.064,
+    "average_reward": -49.048,
+    "reward_std": 86.48676023531,
+    "average_steps": 6.984
+   }
+  },
+  {
+   "agent": "random",
+   "seed": 1,
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.256,
+    "death_rate": 0.675,
+    "timeout_rate": 0.069,
+    "average_reward": -47.979,
+    "reward_std": 86.6587015769334,
+    "average_steps": 7.01
+   }
+  },
+  {
+   "agent": "random",
+   "seed": 2,
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.238,
+    "death_rate": 0.686,
+    "timeout_rate": 0.076,
+    "average_reward": -51.191,
+    "reward_std": 84.61249623430336,
+    "average_steps": 7.315
+   }
+  }
+ ]
+}

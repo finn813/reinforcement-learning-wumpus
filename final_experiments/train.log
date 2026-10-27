@@ -1,0 +1,41 @@
+DONE drqn_pool1000_seed0: train win 25.2%, test win 25.0%, 7.1 min
+DONE drqn_pool1000_seed1: train win 26.3%, test win 28.7%, 7.1 min
+DONE drqn_pool1_seed0: train win 100.0%, test win 15.8%, 2.3 min
+DONE drqn_pool1_seed1: train win 100.0%, test win 14.0%, 2.1 min
+DONE drqn_pool1_seed2: train win 100.0%, test win 10.2%, 2.1 min
+DONE drqn_pool1000_seed2: train win 29.6%, test win 31.2%, 6.8 min
+DONE dqn_pool1000_seed0: train win 10.4%, test win 9.1%, 2.3 min
+DONE dqn_pool1000_seed1: train win 11.6%, test win 10.9%, 2.3 min
+DONE dqn_pool100_seed0: train win 23.0%, test win 17.5%, 2.1 min
+DONE dqn_pool1000_seed2: train win 8.9%, test win 7.8%, 2.3 min
+DONE dqn_pool100_seed1: train win 12.0%, test win 12.8%, 2.2 min
+DONE dqn_pool100_seed2: train win 15.0%, test win 10.7%, 2.2 min
+DONE dqn_pool10_seed0: train win 20.0%, test win 11.6%, 1.9 min
+DONE dqn_pool10_seed1: train win 40.0%, test win 16.9%, 1.9 min
+DONE dqn_pool1_seed0: train win 100.0%, test win 4.0%, 1.2 min
+DONE dqn_pool1_seed1: train win 100.0%, test win 4.0%, 0.6 min
+DONE dqn_pool10_seed2: train win 40.0%, test win 14.7%, 2.3 min
+DONE q_learning_pool1000_seed0: train win 10.3%, test win 12.9%, 0.1 min
+DONE q_learning_pool1000_seed1: train win 13.9%, test win 15.1%, 0.1 min
+DONE dqn_pool1_seed2: train win 100.0%, test win 4.0%, 0.7 min
+DONE q_learning_pool1000_seed2: train win 14.6%, test win 13.5%, 0.1 min
+DONE q_learning_pool100_seed1: train win 20.0%, test win 15.0%, 0.1 min
+DONE q_learning_pool100_seed0: train win 16.0%, test win 13.5%, 0.1 min
+DONE q_learning_pool10_seed0: train win 40.0%, test win 14.3%, 0.0 min
+DONE q_learning_pool100_seed2: train win 16.0%, test win 13.6%, 0.1 min
+DONE q_learning_pool10_seed1: train win 40.0%, test win 14.3%, 0.1 min
+DONE q_learning_pool10_seed2: train win 50.0%, test win 16.1%, 0.0 min
+DONE q_learning_pool1_seed0: train win 100.0%, test win 20.6%, 0.0 min
+DONE q_learning_pool1_seed1: train win 100.0%, test win 20.6%, 0.0 min
+DONE q_learning_pool1_seed2: train win 100.0%, test win 20.6%, 0.0 min
+REUSED drqn_pool10_seed0: train win 90.0%, test win 19.8%
+REUSED drqn_pool10_seed1: train win 70.0%, test win 24.3%
+REUSED drqn_pool10_seed2: train win 90.0%, test win 23.2%
+REUSED drqn_pool100_seed0: train win 53.0%, test win 37.2%
+REUSED drqn_pool100_seed1: train win 57.0%, test win 35.7%
+REUSED drqn_pool100_seed2: train win 58.0%, test win 37.6%
+random 0 test win 25.3%
+random 1 test win 25.6%
+random 2 test win 23.8%
+kb  test win 45.1%
+ALL DONE
