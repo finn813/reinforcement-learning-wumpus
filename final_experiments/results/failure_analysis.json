@@ -1,0 +1,75 @@
+{
+ "100": {
+  "groups": {
+   "A": {
+    "label": "Breeze/stench at the start (no risk-free move exists)",
+    "maps": 356,
+    "win": 0.13108614232209737,
+    "death": 0.5262172284644194,
+    "timeout": 0.34269662921348315
+   },
+   "B": {
+    "label": "Clean start, KB agent wins (winnable without risk)",
+    "maps": 451,
+    "win": 0.6533628972653363,
+    "death": 0.10790835181079084,
+    "timeout": 0.23872875092387288
+   },
+   "C": {
+    "label": "Clean start, KB agent times out (a risk is needed later)",
+    "maps": 193,
+    "win": 0.1398963730569948,
+    "death": 0.3488773747841105,
+    "timeout": 0.5112262521588947
+   }
+  },
+  "death_causes": {
+   "first move out of a start with breeze/stench": 0.5461538461538461,
+   "walked into a provable hazard": 0.2175824175824176,
+   "risk taken although provably safe cells were still unvisited": 0.13186813186813187,
+   "risk taken after all provably safe cells were used up": 0.1043956043956044
+  },
+  "timeouts_on_risk_free_maps": {
+   "stopped exploring: looped or bumped although safe cells were left": 0.8328173374613003,
+   "still exploring when the 20 steps ran out": 0.16718266253869968
+  },
+  "timeouts_on_risk_free_maps_gold_on_safe_cell": 0.5077399380804953,
+  "timeouts_on_risk_free_maps_mean_safe_cells_left": 2.2879256965944275
+ },
+ "1000": {
+  "groups": {
+   "A": {
+    "label": "Breeze/stench at the start (no risk-free move exists)",
+    "maps": 356,
+    "win": 0.0,
+    "death": 0.0,
+    "timeout": 1.0
+   },
+   "B": {
+    "label": "Clean start, KB agent wins (winnable without risk)",
+    "maps": 451,
+    "win": 0.5979305247597931,
+    "death": 0.046563192904656325,
+    "timeout": 0.35550628233555065
+   },
+   "C": {
+    "label": "Clean start, KB agent times out (a risk is needed later)",
+    "maps": 193,
+    "win": 0.0690846286701209,
+    "death": 0.12607944732297063,
+    "timeout": 0.8048359240069085
+   }
+  },
+  "death_causes": {
+   "walked into a provable hazard": 0.6397058823529411,
+   "risk taken after all provably safe cells were used up": 0.2647058823529412,
+   "risk taken although provably safe cells were still unvisited": 0.09558823529411764
+  },
+  "timeouts_on_risk_free_maps": {
+   "stopped exploring: looped or bumped although safe cells were left": 0.7567567567567568,
+   "still exploring when the 20 steps ran out": 0.24324324324324326
+  },
+  "timeouts_on_risk_free_maps_gold_on_safe_cell": 0.4282744282744283,
+  "timeouts_on_risk_free_maps_mean_safe_cells_left": 2.182952182952183
+ }
+}

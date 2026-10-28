@@ -1,0 +1,584 @@
+{
+ "agent": "q_learning",
+ "episodes": 10000,
+ "pool_sizes": [
+  1,
+  10,
+  100,
+  1000
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "std": "sample standard deviation over the 3 seeds (ddof=1)",
+ "runs": [
+  {
+   "agent": "q_learning",
+   "pool_size": 1,
+   "seed": 0,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 1.1,
+   "train": {
+    "episodes": 1,
+    "win_rate": 1.0,
+    "death_rate": 0.0,
+    "timeout_rate": 0.0,
+    "average_reward": 98.0,
+    "reward_std": 0.0,
+    "average_steps": 3.0
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.206,
+    "death_rate": 0.674,
+    "timeout_rate": 0.12,
+    "average_reward": -53.402,
+    "reward_std": 81.04611277538238,
+    "average_steps": 7.482
+   },
+   "generalization_gap": 0.794,
+   "reward_gap": 151.402
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 1,
+   "seed": 1,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 1.3,
+   "train": {
+    "episodes": 1,
+    "win_rate": 1.0,
+    "death_rate": 0.0,
+    "timeout_rate": 0.0,
+    "average_reward": 98.0,
+    "reward_std": 0.0,
+    "average_steps": 3.0
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.206,
+    "death_rate": 0.674,
+    "timeout_rate": 0.12,
+    "average_reward": -53.402,
+    "reward_std": 81.04611277538238,
+    "average_steps": 7.482
+   },
+   "generalization_gap": 0.794,
+   "reward_gap": 151.402
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 1,
+   "seed": 2,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 1.2,
+   "train": {
+    "episodes": 1,
+    "win_rate": 1.0,
+    "death_rate": 0.0,
+    "timeout_rate": 0.0,
+    "average_reward": 98.0,
+    "reward_std": 0.0,
+    "average_steps": 3.0
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.206,
+    "death_rate": 0.674,
+    "timeout_rate": 0.12,
+    "average_reward": -53.402,
+    "reward_std": 81.04611277538238,
+    "average_steps": 7.482
+   },
+   "generalization_gap": 0.794,
+   "reward_gap": 151.402
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 10,
+   "seed": 0,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 2.8,
+   "train": {
+    "episodes": 10,
+    "win_rate": 0.4,
+    "death_rate": 0.1,
+    "timeout_rate": 0.5,
+    "average_reward": 19.1,
+    "reward_std": 68.2487362520362,
+    "average_steps": 11.4
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.143,
+    "death_rate": 0.473,
+    "timeout_rate": 0.384,
+    "average_reward": -41.782,
+    "reward_std": 68.90427037564508,
+    "average_steps": 9.398
+   },
+   "generalization_gap": 0.257,
+   "reward_gap": 60.882
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 10,
+   "seed": 1,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 3.0,
+   "train": {
+    "episodes": 10,
+    "win_rate": 0.4,
+    "death_rate": 0.1,
+    "timeout_rate": 0.5,
+    "average_reward": 19.1,
+    "reward_std": 68.2487362520362,
+    "average_steps": 11.4
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.143,
+    "death_rate": 0.473,
+    "timeout_rate": 0.384,
+    "average_reward": -41.782,
+    "reward_std": 68.90427037564508,
+    "average_steps": 9.398
+   },
+   "generalization_gap": 0.257,
+   "reward_gap": 60.882
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 10,
+   "seed": 2,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 2.8,
+   "train": {
+    "episodes": 10,
+    "win_rate": 0.5,
+    "death_rate": 0.1,
+    "timeout_rate": 0.4,
+    "average_reward": 30.8,
+    "reward_std": 70.53339634527747,
+    "average_steps": 9.8
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.161,
+    "death_rate": 0.482,
+    "timeout_rate": 0.357,
+    "average_reward": -40.438,
+    "reward_std": 71.52296243864623,
+    "average_steps": 8.981
+   },
+   "generalization_gap": 0.33899999999999997,
+   "reward_gap": 71.238
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 100,
+   "seed": 0,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 3.7,
+   "train": {
+    "episodes": 100,
+    "win_rate": 0.16,
+    "death_rate": 0.0,
+    "timeout_rate": 0.84,
+    "average_reward": -1.07,
+    "reward_std": 43.37839439167845,
+    "average_steps": 17.23
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.135,
+    "death_rate": 0.023,
+    "timeout_rate": 0.842,
+    "average_reward": -5.855,
+    "reward_std": 43.21210449630983,
+    "average_steps": 17.213
+   },
+   "generalization_gap": 0.024999999999999994,
+   "reward_gap": 4.785
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 100,
+   "seed": 1,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 3.4,
+   "train": {
+    "episodes": 100,
+    "win_rate": 0.2,
+    "death_rate": 0.0,
+    "timeout_rate": 0.8,
+    "average_reward": 3.54,
+    "reward_std": 47.08703006136615,
+    "average_steps": 16.66
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.15,
+    "death_rate": 0.026,
+    "timeout_rate": 0.824,
+    "average_reward": -4.366,
+    "reward_std": 45.26117590164886,
+    "average_steps": 16.942
+   },
+   "generalization_gap": 0.05000000000000002,
+   "reward_gap": 7.906
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 100,
+   "seed": 2,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 3.7,
+   "train": {
+    "episodes": 100,
+    "win_rate": 0.16,
+    "death_rate": 0.0,
+    "timeout_rate": 0.84,
+    "average_reward": -1.07,
+    "reward_std": 43.37839439167845,
+    "average_steps": 17.23
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.136,
+    "death_rate": 0.024,
+    "timeout_rate": 0.84,
+    "average_reward": -5.819,
+    "reward_std": 43.42006723854767,
+    "average_steps": 17.179
+   },
+   "generalization_gap": 0.023999999999999994,
+   "reward_gap": 4.749
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 1000,
+   "seed": 0,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 4.4,
+   "train": {
+    "episodes": 1000,
+    "win_rate": 0.103,
+    "death_rate": 0.0,
+    "timeout_rate": 0.897,
+    "average_reward": -7.736,
+    "reward_std": 36.19389871235206,
+    "average_steps": 18.139
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.129,
+    "death_rate": 0.0,
+    "timeout_rate": 0.871,
+    "average_reward": -4.638,
+    "reward_std": 39.91975646218299,
+    "average_steps": 17.667
+   },
+   "generalization_gap": -0.02600000000000001,
+   "reward_gap": -3.098
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 1000,
+   "seed": 1,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 3.7,
+   "train": {
+    "episodes": 1000,
+    "win_rate": 0.139,
+    "death_rate": 0.006,
+    "timeout_rate": 0.855,
+    "average_reward": -4.023,
+    "reward_std": 41.75969912487397,
+    "average_steps": 17.468
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.151,
+    "death_rate": 0.008,
+    "timeout_rate": 0.841,
+    "average_reward": -2.741,
+    "reward_std": 43.489951931451934,
+    "average_steps": 17.2
+   },
+   "generalization_gap": -0.011999999999999983,
+   "reward_gap": -1.2819999999999996
+  },
+  {
+   "agent": "q_learning",
+   "pool_size": 1000,
+   "seed": 2,
+   "episodes": 10000,
+   "hyperparameters": {
+    "learning_rate": 0.01,
+    "initial_epsilon": 1.0,
+    "final_epsilon": 0.01,
+    "discount_factor": 0.95
+   },
+   "source": "trained by final_experiments/pipeline.py",
+   "train_seconds": 4.0,
+   "train": {
+    "episodes": 1000,
+    "win_rate": 0.146,
+    "death_rate": 0.0,
+    "timeout_rate": 0.854,
+    "average_reward": -2.717,
+    "reward_std": 41.8040298416313,
+    "average_steps": 17.463
+   },
+   "test": {
+    "episodes": 1000,
+    "win_rate": 0.135,
+    "death_rate": 0.0,
+    "timeout_rate": 0.865,
+    "average_reward": -3.94,
+    "reward_std": 40.65560723934645,
+    "average_steps": 17.575
+   },
+   "generalization_gap": 0.010999999999999982,
+   "reward_gap": 1.2229999999999999
+  }
+ ],
+ "aggregate": {
+  "1": {
+   "seeds": 3,
+   "train_win_rate": [
+    1.0,
+    0.0
+   ],
+   "train_death_rate": [
+    0.0,
+    0.0
+   ],
+   "train_timeout_rate": [
+    0.0,
+    0.0
+   ],
+   "train_average_reward": [
+    98.0,
+    0.0
+   ],
+   "test_win_rate": [
+    0.206,
+    0.0
+   ],
+   "test_death_rate": [
+    0.674,
+    0.0
+   ],
+   "test_timeout_rate": [
+    0.12,
+    0.0
+   ],
+   "test_average_reward": [
+    -53.40200000000001,
+    8.702335715267317e-15
+   ],
+   "generalization_gap": [
+    0.794,
+    0.0
+   ]
+  },
+  "10": {
+   "seeds": 3,
+   "train_win_rate": [
+    0.43333333333333335,
+    0.05773502691896257
+   ],
+   "train_death_rate": [
+    0.10000000000000002,
+    1.6996749443881478e-17
+   ],
+   "train_timeout_rate": [
+    0.4666666666666666,
+    0.05773502691896256
+   ],
+   "train_average_reward": [
+    23.0,
+    6.754998149518621
+   ],
+   "test_win_rate": [
+    0.149,
+    0.010392304845413272
+   ],
+   "test_death_rate": [
+    0.476,
+    0.005196152422706636
+   ],
+   "test_timeout_rate": [
+    0.375,
+    0.01558845726811991
+   ],
+   "test_average_reward": [
+    -41.333999999999996,
+    0.7759587617908535
+   ],
+   "generalization_gap": [
+    0.2843333333333333,
+    0.04734272207354929
+   ]
+  },
+  "100": {
+   "seeds": 3,
+   "train_win_rate": [
+    0.17333333333333334,
+    0.023094010767585032
+   ],
+   "train_death_rate": [
+    0.0,
+    0.0
+   ],
+   "train_timeout_rate": [
+    0.8266666666666667,
+    0.023094010767584987
+   ],
+   "train_average_reward": [
+    0.46666666666666656,
+    2.661584740964175
+   ],
+   "test_win_rate": [
+    0.14033333333333334,
+    0.008386497083606075
+   ],
+   "test_death_rate": [
+    0.024333333333333335,
+    0.0015275252316519462
+   ],
+   "test_timeout_rate": [
+    0.8353333333333333,
+    0.009865765724632504
+   ],
+   "test_average_reward": [
+    -5.346666666666667,
+    0.8494729738687005
+   ],
+   "generalization_gap": [
+    0.033,
+    0.014730919862656249
+   ]
+  },
+  "1000": {
+   "seeds": 3,
+   "train_win_rate": [
+    0.12933333333333333,
+    0.023072349974229616
+   ],
+   "train_death_rate": [
+    0.002,
+    0.0034641016151377543
+   ],
+   "train_timeout_rate": [
+    0.8686666666666666,
+    0.02454248017893331
+   ],
+   "train_average_reward": [
+    -4.825333333333334,
+    2.603919033559479
+   ],
+   "test_win_rate": [
+    0.13833333333333334,
+    0.011372481406154647
+   ],
+   "test_death_rate": [
+    0.0026666666666666666,
+    0.004618802153517006
+   ],
+   "test_timeout_rate": [
+    0.859,
+    0.01587450786638756
+   ],
+   "test_average_reward": [
+    -3.7729999999999997,
+    0.9594628705687364
+   ],
+   "generalization_gap": [
+    -0.009000000000000003,
+    0.018681541692269397
+   ]
+  }
+ }
+}

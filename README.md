@@ -53,3 +53,27 @@ python wumpus_env/test_environment.py      # plain python, no pytest needed
 Covers spaces, percepts (including that diagonals are ignored), movement and wall
 clamping, all reward/termination paths, truncation, map solvability (cross-checked
 with an independent BFS), pool stability, seed reproducibility, and input validation.
+
+## Train/test evaluation
+
+Use a finite training-map pool to measure memorisation separately from
+generalisation. ``evaluate_train_test`` reports win/death/timeout rates, reward
+statistics and episode length for both the training pool and a reproducible pool
+of unseen maps. It also reports the generalization gap (training win rate minus
+test win rate); a large positive gap is evidence of overfitting.
+
+```python
+from evaluation import evaluate_train_test
+
+metrics = evaluate_train_test(
+    agent,
+    training_env=env,
+    num_test_maps=100,
+    test_seed=12345,
+)
+```
+
+The agent notebooks (`q_agent.ipynb`, `deep_q_agent.ipynb`, `dqrn_agent.ipynb`,
+`kb_agent.ipynb`) can be used to run these tests as well: each trains its agent
+and then evaluates it greedily on its training maps and on unseen maps. The
+knowledge-based agent needs no training and is only tested.
