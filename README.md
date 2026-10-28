@@ -72,3 +72,8 @@ metrics = evaluate_train_test(
     test_seed=12345,
 )
 ```
+
+The agent notebooks (`q_agent.ipynb`, `deep_q_agent.ipynb`, `dqrn_agent.ipynb`,
+`kb_agent.ipynb`) can be used to run these tests as well: each trains its agent
+and then evaluates it greedily on its training maps and on unseen maps. The
+knowledge-based agent needs no training and is only tested.
