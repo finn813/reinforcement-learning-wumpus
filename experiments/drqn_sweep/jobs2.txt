@@ -1,8 +1,0 @@
---episodes 20000 --period 100 --seed 0
---episodes 20000 --period 100 --seed 1
---episodes 20000 --period 100 --seed 2
---episodes 20000 --period 500 --seed 2
---episodes 20000 --period 1000 --seed 2
---episodes 10000 --period 100 --seed 2
---episodes 10000 --period 500 --seed 2
---episodes 10000 --period 1000 --seed 2
